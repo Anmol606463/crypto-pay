@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { Check, Info, Box, Zap, Crown, Building } from 'lucide-react';
+import { Check, Box, Zap, Crown, Building } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Pricing() {

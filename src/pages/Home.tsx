@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Zap, Activity, RefreshCw, LayoutDashboard, Puzzle, Server, 
-  CheckCircle, ShieldCheck, Mail, Database, CreditCard, ChevronRight,
+  CheckCircle, ShieldCheck, Mail, Database, ChevronRight,
   ArrowRight
 } from 'lucide-react';
 
