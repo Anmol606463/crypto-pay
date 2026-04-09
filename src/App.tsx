@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
 import Plugins from './pages/Plugins';
+import Contact from './pages/Contact';
+import TelegramPopup from './components/TelegramPopup';
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/plugins" element={<Plugins />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
+        <TelegramPopup />
       </div>
     </Router>
   );
