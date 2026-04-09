@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import QRScannerAnimation from '../components/QRScannerAnimation';
+import { USDTLogo, USDCLogo, TRONLogo, ETHLogo } from '../components/CryptoLogos';
 import { 
   Zap, Activity, RefreshCw, LayoutDashboard, Puzzle, Server, 
   CheckCircle, ShieldCheck, Mail, Database, ChevronRight,
@@ -67,19 +68,19 @@ export default function Home() {
                     className="mt-12 flex flex-wrap items-center gap-8 grayscale opacity-50 contrast-125"
                 >
                     <div className="flex items-center gap-2">
-                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/usdt.png" className="h-6" alt="USDT" />
+                        <USDTLogo className="h-6 w-6" />
                         <span className="text-sm font-bold text-gray-400">USDT</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/usdc.png" className="h-6" alt="USDC" />
+                        <USDCLogo className="h-6 w-6" />
                         <span className="text-sm font-bold text-gray-400">USDC</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/trx.png" className="h-6" alt="TRON" />
+                        <TRONLogo className="h-6 w-6" />
                         <span className="text-sm font-bold text-gray-400">TRON</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/eth.png" className="h-6" alt="ETH" />
+                        <ETHLogo className="h-6 w-6" />
                         <span className="text-sm font-bold text-gray-400">ETH</span>
                     </div>
                 </motion.div>
