@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import QRScannerAnimation from '../components/QRScannerAnimation';
 import { 
   Zap, Activity, RefreshCw, LayoutDashboard, Puzzle, Server, 
   CheckCircle, ShieldCheck, Mail, Database, ChevronRight,
@@ -47,34 +48,15 @@ export default function Home() {
           </Link>
         </motion.div>
 
-        {/* UI Preview Fake Image */}
+        {/* Dynamic Payment Animation */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="relative mx-auto max-w-5xl rounded-xl border border-dark-border bg-dark-lighter/50 shadow-2xl shadow-primary-500/10 overflow-hidden"
+          className="relative"
         >
-          <div className="flex items-center px-4 py-3 border-b border-dark-border bg-dark/50">
-            <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-          </div>
-          <div className="p-8 grid grid-cols-3 gap-6 opacity-80 pointer-events-none h-96">
-             <div className="col-span-1 rounded-lg bg-dark border border-dark-border p-4 flex flex-col gap-4">
-                <div className="h-4 bg-dark-border rounded w-1/2"></div>
-                <div className="h-10 bg-primary-900/30 border border-primary-500/30 rounded mt-4"></div>
-                <div className="h-10 bg-dark-border/50 rounded"></div>
-             </div>
-             <div className="col-span-2 rounded-lg bg-dark border border-dark-border p-4 flex flex-col gap-4">
-                 <div className="h-8 bg-dark-border rounded w-1/3 mb-4"></div>
-                 <div className="h-12 bg-dark-border/30 rounded"></div>
-                 <div className="h-12 bg-dark-border/30 rounded"></div>
-                 <div className="h-12 bg-dark-border/30 rounded"></div>
-             </div>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+          <QRScannerAnimation />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-dark to-transparent z-20 pointer-events-none"></div>
         </motion.div>
       </section>
 
