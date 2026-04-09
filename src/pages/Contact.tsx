@@ -1,4 +1,3 @@
-import React from 'react';
 import { Send, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
