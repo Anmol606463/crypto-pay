@@ -23,7 +23,6 @@ export default function Navbar() {
             <Link to="/" className="text-sm text-gray-400 hover:text-white transition-colors">Product</Link>
             <Link to="/pricing" className="text-sm text-gray-400 hover:text-white transition-colors">Pricing</Link>
             <Link to="/plugins" className="text-sm text-gray-400 hover:text-white transition-colors">Plugins</Link>
-            <Link to="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">Contact</Link>
             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Docs</a>
           </div>
 
@@ -52,7 +51,6 @@ export default function Navbar() {
             <Link to="/" className="block px-3 py-2 text-base text-gray-400 hover:text-white">Product</Link>
             <Link to="/pricing" className="block px-3 py-2 text-base text-gray-400 hover:text-white">Pricing</Link>
             <Link to="/plugins" className="block px-3 py-2 text-base text-gray-400 hover:text-white">Plugins</Link>
-            <Link to="/contact" className="block px-3 py-2 text-base text-gray-400 hover:text-white">Contact</Link>
             <a href="#" className="block px-3 py-2 text-base text-gray-400 hover:text-white">Docs</a>
             <div className="pt-4 flex flex-col gap-2">
               <a href="#" className="block px-3 py-2 text-base text-gray-400 hover:text-white text-center border border-gray-700 rounded-lg">Login</a>
