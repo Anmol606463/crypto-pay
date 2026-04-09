@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Pricing from './pages/Pricing';
 import Plugins from './pages/Plugins';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 import TelegramPopup from './components/TelegramPopup';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/plugins" element={<Plugins />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
         <Footer />

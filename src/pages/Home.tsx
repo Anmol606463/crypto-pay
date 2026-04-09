@@ -9,55 +9,81 @@ import {
 
 export default function Home() {
   return (
-    <div className="pt-20">
+    <div className="pt-20 overflow-hidden">
       <div className="glow-bg top-0 left-1/4"></div>
       
       {/* Hero Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8"
-        >
-          Accept crypto payments with <br className="hidden md:block"/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
-            speed and control
-          </span>
-        </motion.h1>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="max-w-2xl mx-auto text-xl text-gray-400 mb-10"
-        >
-          Create payment orders, monitor on-chain transfers, confirm payments automatically, and manage callbacks in one merchant dashboard. Built for USDT / USDC order collection.
-        </motion.p>
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
-        >
-          <button className="w-full sm:w-auto px-8 py-3 rounded-lg bg-primary-600 hover:bg-primary-500 text-white font-semibold transition-all">
-            Get Started
-          </button>
-          <Link to="/pricing" className="w-full sm:w-auto px-8 py-3 rounded-lg glass-panel hover:bg-white/5 text-white font-semibold flex items-center justify-center gap-2 transition-all">
-            View Pricing <ArrowRight className="w-4 h-4" />
-          </Link>
-        </motion.div>
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left panel */}
+            <div className="text-left">
+                <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-600/10 border border-primary-500/20 mb-6"
+                >
+                    <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
+                    <span className="text-[10px] text-primary-400 font-bold uppercase tracking-widest">New: USDC Settlement v2.0</span>
+                </motion.div>
 
-        {/* Dynamic Payment Animation */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="relative"
-        >
-          <QRScannerAnimation />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-dark to-transparent z-20 pointer-events-none"></div>
-        </motion.div>
+                <motion.h1 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight"
+                >
+                    Accept crypto <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
+                        with zero friction
+                    </span>
+                </motion.h1>
+                
+                <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className="max-w-xl text-xl text-gray-400 mb-10 leading-relaxed"
+                >
+                    Generate merchant QR codes, monitor on-chain transfers in real-time, and get instant callbacks. Built for USDT/USDC order collection with sub-second detection.
+                </motion.p>
+                
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="flex flex-col sm:flex-row items-center gap-4"
+                >
+                    <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold transition-all shadow-xl shadow-primary-600/20 active:scale-95">
+                        Start Accepting Crypto
+                    </button>
+                    <Link to="/plugins" className="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-white/5 text-white font-semibold flex items-center justify-center gap-2 transition-all">
+                        Developer API <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </motion.div>
+
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="mt-12 flex items-center gap-8 grayscale opacity-50 contrast-125"
+                >
+                    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" className="h-6" alt="USDT" />
+                    <img src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png" className="h-6" alt="USDC" />
+                    <img src="https://cryptologos.cc/logos/tron-trx-logo.png" className="h-6" alt="TRON" />
+                    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" className="h-6" alt="ETH" />
+                </motion.div>
+            </div>
+
+            {/* Right panel (animation area) */}
+            <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="relative"
+            >
+                <QRScannerAnimation />
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary-600/20 to-purple-600/20 blur-3xl -z-10 rounded-full"></div>
+            </motion.div>
+        </div>
       </section>
 
       {/* Value Propositions */}
