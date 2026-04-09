@@ -64,12 +64,24 @@ export default function Home() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="mt-12 flex items-center gap-8 grayscale opacity-50 contrast-125"
+                    className="mt-12 flex flex-wrap items-center gap-8 grayscale opacity-50 contrast-125"
                 >
-                    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" className="h-6" alt="USDT" />
-                    <img src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png" className="h-6" alt="USDC" />
-                    <img src="https://cryptologos.cc/logos/tron-trx-logo.png" className="h-6" alt="TRON" />
-                    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" className="h-6" alt="ETH" />
+                    <div className="flex items-center gap-2">
+                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/usdt.png" className="h-6" alt="USDT" />
+                        <span className="text-sm font-bold text-gray-400">USDT</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/usdc.png" className="h-6" alt="USDC" />
+                        <span className="text-sm font-bold text-gray-400">USDC</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/trx.png" className="h-6" alt="TRON" />
+                        <span className="text-sm font-bold text-gray-400">TRON</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@1a6115a/128/color/eth.png" className="h-6" alt="ETH" />
+                        <span className="text-sm font-bold text-gray-400">ETH</span>
+                    </div>
                 </motion.div>
             </div>
 
